@@ -76,11 +76,11 @@ h1 {
 }
 
 .chai-simulator {
-        background-image: url('/src/chai.png');
+        background-image: url('chai.png');
 }
 
 .horror-maze {
-        background-image: url('/src/horror-maze.png');
+        background-image: url('horror-maze.png');
 }
 
 .games div:hover {
