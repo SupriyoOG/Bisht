@@ -1,0 +1,192 @@
+body {
+        font-size: 18pt;
+        color: white;
+        background: black;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+}
+
+
+
+@keyframes rainbow {
+        0% {
+                box-shadow: 0 0 100px red, 30px 0 100px yellow, 60px 0 100px lime;
+        }
+
+        33.33% {
+                box-shadow: 0 0 100px lime, 30px 0 100px cyan, 60px 0 100px blue;
+        }
+
+        66.66% {
+                box-shadow: 0 0 100px blue, 30px 0 100px magenta, 60px 0 100px red;
+        }
+
+        100% {
+                box-shadow: 0 0 100px red, 30px 0 100px yellow, 60px 0 100px lime;
+        }
+}
+
+header {
+        height: 5rem;
+        text-align: center;
+        animation: rainbow 10s infinite linear;
+}
+
+header span {
+        background: linear-gradient(to bottom right, white, #111);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        filter: saturate(200%);
+        font-size: 2em;
+        position: relative;
+        font-weight: 900;
+        font-variant: small-caps;
+        text-transform: lowercase;
+}
+
+.menu {
+        background: #111;
+        position: fixed;
+        bottom: 0;
+        height: 4rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        box-shadow: 0 0 30px black;
+        opacity: 0;
+        transform: translateY(100px);
+        animation: fadeup 1s 2s ease forwards;
+}
+
+.menu a {
+        color: grey;
+        text-decoration: none;
+        font-variant: small-caps;
+        text-transform: lowercase;
+        transition: all .1s ease;
+}
+
+.menu i {
+        color: grey;
+}
+
+#checkbox {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        transform: scale(1.5);
+}
+
+.about i,
+.about a,
+.games i,
+.games a {
+        transition: color 1s ease;
+}
+
+.about:hover i,
+.about:hover a {
+        text-shadow: 0 0 32px transparent;
+        animation: rainbowTextShadow 5s infinite ease;
+}
+
+.games:hover i,
+.games:hover a {
+        text-shadow: 0 0 32px transparent;
+        animation: rainbowTextShadow 5s infinite linear;
+}
+
+@keyframes rainbowTextShadow {
+        0% {
+                text-shadow: 0 0 32px transparent;
+                color: red;
+        }
+
+        14.285% {
+                text-shadow: 0 0 32px red;
+                color: orange;
+        }
+
+        28.57% {
+                text-shadow: 0 0 32px orange;
+                color: yellow;
+        }
+
+        42.855% {
+                text-shadow: 0 0 32px yellow;
+                color: lime;
+        }
+
+        57.14% {
+                text-shadow: 0 0 32px lime;
+                color: cyan;
+        }
+
+        71.425% {
+                text-shadow: 0 0 32px cyan;
+                color: blue;
+        }
+
+        85.71% {
+                text-shadow: 0 0 32px blue;
+                color: magenta;
+        }
+
+        100% {
+                text-shadow: 0 0 32px transparent;
+                color: red;
+        }
+}
+
+
+main {
+        padding: 50px;
+        font-size: 18pt;
+}
+
+main h1 {
+        font-variant: small-caps;
+        opacity: 0;
+        animation: pop 1s forwards ease;
+}
+
+@keyframes pop {
+        from {
+                opacity: 0;
+                transform: translateY(10px)
+        }
+
+        to {
+                opacity: 1;
+                transform: translateY(0);
+        }
+}
+
+@keyframes fadeup {
+        from {
+                opacity: 0;
+                transform: translateY(100px)
+        }
+
+        to {
+                opacity: 1;
+                transform: translateY(0);
+        }
+}
+
+.tagline {
+        opacity: 0;
+        animation: pop 1s 1s forwards ease;
+}
+
+main p {
+        letter-spacing: 2px;
+        word-spacing: 2px;
+        animation: fadeup 2s 2s ease forwards;
+        opacity: 0;
+}
